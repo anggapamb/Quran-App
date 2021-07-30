@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DetailSuratActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDetailSuratActivity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:navigationIcon="@drawable/ic_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNameDetailToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Al-Fatihah"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="@color/purpleColor"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                app:cardCornerRadius="@dimen/_8sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_card_lost_read">
+
+                    <ImageView
+                        android:layout_width="@dimen/_180sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_alignParentBottom="true"
+                        android:scaleType="centerCrop"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/quranbiru2"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvNameDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Al-Fatihah"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:textSize="@dimen/_20ssp"
+                            android:textColor="@android:color/white"/>
+
+                        <TextView
+                            android:id="@+id/tvArtiDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pembukaan"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:textColor="@android:color/white"/>
+
+                        <View
+                            android:layout_width="@dimen/_200sdp"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/tvMekahDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="mekah, 7 ayat"
+                            android:textAllCaps="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textColor="@android:color/white"/>
+
+                        <TextView
+                            android:id="@+id/tvAsmaDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:textSize="@dimen/_20ssp"
+                            android:layout_marginTop="@dimen/_15sdp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tvRecyclerviewDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_detail_surat"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
